@@ -36,6 +36,5 @@ export function generateSecret(numDigit) {
     let digits = Math.pow(10, numDigit - 1) * 9;
     let res = (Math.floor(digits/10 + Math.random() * digits)).toString();
     console.log(res);
-    console.log(res);
     return res;
 }
