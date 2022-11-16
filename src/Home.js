@@ -5,6 +5,7 @@ function Home() {
   const navigate = useNavigate();
   return (
     <div>
+      <h1>Select a game</h1>
       <button
         onClick={() => {
           navigate('/bullsandcows');
@@ -14,7 +15,7 @@ function Home() {
       </button>
       <button
         onClick={() => {
-          navigate('/tictaetoe');
+          navigate('/tictactoe');
         }}
       >
         TicTacToe

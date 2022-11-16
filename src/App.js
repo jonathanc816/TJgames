@@ -1,10 +1,9 @@
 import './App.css';
 import React, { Component } from 'react';
-import BullsAndCowspg from './BullsAndCows';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import TicTacToe from './TicTacToe';
 import Home from './Home';
-
+import BullsAndCowspg from './BullsAndCows';
 function App() {
   return (
     <div>
