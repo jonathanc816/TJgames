@@ -13,6 +13,14 @@ function Home() {
       >
         Bulls and Cows
       </button>
+
+      <button
+        onClick={() => {
+          navigate('/guessnum');
+        }}
+      >
+        Guess the number
+      </button>
       <button
         onClick={() => {
           navigate('/tictactoe');
