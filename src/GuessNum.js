@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { numGenerator, numrange } from './games/GuessNumFunction';
 
@@ -40,8 +40,8 @@ class GuessNum extends React.Component {
         <div>
           <h2>
             The range is: {this.state.range[0]} to {this.state.range[1]}
-            Turns left: {this.state.turns}
           </h2>
+          <h2>Turns left: {this.state.turns}</h2>
         </div>
         <div>
           <input
@@ -63,11 +63,10 @@ class GuessNum extends React.Component {
                 this.state.target,
                 this.state.value
               );
+
               this.state.turns -= 1;
-              if (this.state.turns == 0) {
-                if (this.state.range != true) {
-                  alert();
-                }
+              if (this.state.turns == 0 && this.state.range != true) {
+                alert('You fail!');
               }
               console.log(this.state.range);
             }}

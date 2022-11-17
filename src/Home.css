@@ -1,0 +1,20 @@
+body {
+  text-align: center;
+  background-color: rgb(59, 58, 58);
+  color: aqua;
+}
+
+button {
+  background-color: rgb(95, 91, 91);
+  font-size: large;
+  color: aqua;
+  height: 50px;
+  width: 200px;
+}
+.selections {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 50px;
+}

@@ -1,10 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import './Home.css';
 
 function Home() {
   const navigate = useNavigate();
   return (
-    <div>
+    <div class="selections">
       <h1>Select a game</h1>
       <button
         onClick={() => {
