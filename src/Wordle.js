@@ -44,7 +44,8 @@ class Wordle extends React.Component {
             Guess 1:{' '}
             <input
               type="text"
-              value={this.state.value}
+              id="guess5"
+              // value={this.state.value}
               onChange={this.handleChange}
             />
           </div>
@@ -52,7 +53,7 @@ class Wordle extends React.Component {
             Guess 2:{' '}
             <input
               type="text"
-              value={this.state.value}
+              id="guess4"
               onChange={this.handleChange}
             />
           </div>
@@ -60,7 +61,7 @@ class Wordle extends React.Component {
             Guess 3:{' '}
             <input
               type="text"
-              value={this.state.value}
+              id="guess3"
               onChange={this.handleChange}
             />
           </div>
@@ -68,7 +69,7 @@ class Wordle extends React.Component {
             Guess 4:{' '}
             <input
               type="text"
-              value={this.state.value}
+              id="guess2"
               onChange={this.handleChange}
             />
           </div>
@@ -76,7 +77,7 @@ class Wordle extends React.Component {
             Guess 5:{' '}
             <input
               type="text"
-              value={this.state.value}
+              id="guess1"
               onChange={this.handleChange}
             />
           </div>
@@ -84,14 +85,15 @@ class Wordle extends React.Component {
             Guess 6:{' '}
             <input
               type="text"
-              value={this.state.value}
+              id="guess0"
               onChange={this.handleChange}
             />
           </div>
           <button
             onClick={() => {
-              this.state.numOfTriesRemaining = guessingSecretWord(this.state.numOfTriesRemaining, this.state.secretWord);
+              this.state.numOfTriesRemaining = guessingSecretWord(this.state.numOfTriesRemaining, this.state.secretWord, this.state.value);
               console.log(this.state.numOfTriesRemaining);
+              document.getElementById(`guess${this.state.numOfTriesRemaining}`).disabled = true;
             }}
           >
             Guess
