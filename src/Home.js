@@ -28,6 +28,13 @@ function Home() {
       >
         TicTacToe
       </button>
+      <button
+        onClick={() => {
+          navigate('/wordle');
+        }}
+      >
+        Wordle
+      </button>
     </div>
   );
 }
