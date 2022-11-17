@@ -1,12 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { generateSecretWord, guessingSecretWord } from './games/WordleFunction';
 
 function Wordlepg() {
   const navigate = useNavigate();
   
   return (
     <div>
-      <BullsAndCows />
+      <Wordle />
       <button
         onClick={() => {
           navigate('/');
@@ -19,12 +20,13 @@ function Wordlepg() {
 }
 
 
-class BullsAndCows extends React.Component {
+class Wordle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       value: '',
-      numOfTriesRemaining: 0,
+      numOfTriesRemaining: 6,
+      secretWord: generateSecretWord(),
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -86,6 +88,21 @@ class BullsAndCows extends React.Component {
               onChange={this.handleChange}
             />
           </div>
+          <button
+            onClick={() => {
+              this.state.numOfTriesRemaining = guessingSecretWord(this.state.numOfTriesRemaining, this.state.secretWord);
+              console.log(this.state.numOfTriesRemaining);
+            }}
+          >
+            Guess
+          </button>
+        <button
+            onClick={() => {
+              console.log(this.state.secretWord);
+            }}
+          >
+            Button
+          </button>
         </section>
       );
   }
