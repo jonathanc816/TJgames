@@ -45,7 +45,6 @@ class Wordle extends React.Component {
             <input
               type="text"
               id="guess5"
-              // value={this.state.value}
               onChange={this.handleChange}
             />
           </div>
@@ -91,7 +90,7 @@ class Wordle extends React.Component {
           </div>
           <button
             onClick={() => {
-              this.state.numOfTriesRemaining = guessingSecretWord(this.state.numOfTriesRemaining, this.state.secretWord, this.state.value);
+              this.state.numOfTriesRemaining = guessingSecretWord(this.state.numOfTriesRemaining, this.state.secretWord, this.state.value.toUpperCase());
               console.log(this.state.numOfTriesRemaining);
               document.getElementById(`guess${this.state.numOfTriesRemaining}`).disabled = true;
             }}
@@ -100,10 +99,10 @@ class Wordle extends React.Component {
           </button>
         <button
             onClick={() => {
-              console.log(this.state.secretWord);
+              alert(`The Answer is: ${this.state.secretWord}`);
             }}
           >
-            Button
+            Show Answer
           </button>
         </section>
       );
