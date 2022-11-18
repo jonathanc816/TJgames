@@ -1,5 +1,5 @@
 export function generateSecretWord() {
-    let words = ['apple'];
+    let words = ['APPLE'];
     return words[Math.floor(Math.random()*words.length)];
 }
 
@@ -36,10 +36,25 @@ export function guessingSecretWord(numOfTriesRemaining, secretWord, guessingWord
         }
     }
 
+    let answer = ""
+    for (let i = 0; i < results.length; i++) {
+        if (results[i] == 0) {
+            answer = answer.concat("W");
+        } else if (results[i] == 1) {
+            answer = answer.concat("C");
+        } else {
+            answer = answer.concat("P");
+        }
+    }
     numOfTriesRemaining--;
     if (numOfTriesRemaining == 0) {
         alert('You have used all your tries to guess a secret word.')
         return 0;
+    }
+    
+    // Display hint if guess is wrong
+    if (answer != "WWWWW"){
+        alert(answer);
     }
     return numOfTriesRemaining;
 
