@@ -22,13 +22,7 @@ function Home() {
       >
         Guess the number
       </button>
-      <button
-        onClick={() => {
-          navigate('/tictactoe');
-        }}
-      >
-        TicTacToe
-      </button>
+
       <button
         onClick={() => {
           navigate('/wordle');

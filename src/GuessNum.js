@@ -23,7 +23,7 @@ class GuessNum extends React.Component {
   constructor(props) {
     super(props);
     let nG = numGenerator(3);
-    this.state = { target: nG[0], value: 0, range: [0, nG[1]], turns: 7 };
+    this.state = { target: nG[0], value: 0, range: [1, nG[1]], turns: 7 };
     this.handleChange = this.handleChange.bind(this);
     console.log(this.state.target, this.state.range);
   }
