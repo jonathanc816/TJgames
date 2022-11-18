@@ -38,10 +38,10 @@ class GuessNum extends React.Component {
     return (
       <section>
         <div>
-          <h2>
+          <h2 id="range">
             The range is: {this.state.range[0]} to {this.state.range[1]}
           </h2>
-          <h2>Turns left: {this.state.turns}</h2>
+          <h2 id="turns">Turns left: {this.state.turns}</h2>
         </div>
         <div>
           <input
@@ -65,6 +65,13 @@ class GuessNum extends React.Component {
               );
 
               this.state.turns -= 1;
+              document.getElementById('turns').innerHTML =
+                'Turns left: ' + this.state.turns;
+              document.getElementById('range').innerHTML =
+                'The range is: ' +
+                this.state.range[0] +
+                ' to ' +
+                this.state.range[1];
               if (this.state.turns == 0 && this.state.range != true) {
                 alert('You fail!');
               }
