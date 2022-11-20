@@ -5,9 +5,9 @@ export function numGenerator(digits) {
 }
 
 export function numrange(left, right, target, guess) {
-  if (guess > target) {
-    right = Number(guess);
-  } else if (guess < target) {
+  if (Number(guess) > target) {
+    right = Number(guess) - 1;
+  } else if (Number(guess) < target) {
     left = Number(guess) + 1;
   } else {
     alert(`Correct! The number was: ${target}`);

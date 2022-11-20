@@ -47,8 +47,6 @@ class GuessNum extends React.Component {
           <input
             id="guess"
             type="number"
-            min="0"
-            max="100"
             value={this.state.value}
             onChange={this.handleChange}
           />
@@ -56,14 +54,12 @@ class GuessNum extends React.Component {
         <div>
           <button
             onClick={() => {
-              console.log(left, right);
               this.state.range = numrange(
                 left,
                 right,
                 this.state.target,
                 this.state.value
               );
-
               this.state.turns -= 1;
               document.getElementById('turns').innerHTML =
                 'Turns left: ' + this.state.turns;
@@ -75,7 +71,6 @@ class GuessNum extends React.Component {
               if (this.state.turns == 0 && this.state.range != true) {
                 alert('You fail!');
               }
-              console.log(this.state.range);
             }}
           >
             Guess it!
