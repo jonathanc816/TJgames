@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.d9e89685.css",
-    "main.js": "./static/js/main.a22d44e3.js",
-    "static/js/787.5dbb482b.chunk.js": "./static/js/787.5dbb482b.chunk.js",
-    "index.html": "./index.html",
-    "main.d9e89685.css.map": "./static/css/main.d9e89685.css.map",
-    "main.a22d44e3.js.map": "./static/js/main.a22d44e3.js.map",
-    "787.5dbb482b.chunk.js.map": "./static/js/787.5dbb482b.chunk.js.map"
+    "main.css": "/TJgames/static/css/main.d9e89685.css",
+    "main.js": "/TJgames/static/js/main.ccefc032.js",
+    "static/js/787.5dbb482b.chunk.js": "/TJgames/static/js/787.5dbb482b.chunk.js",
+    "index.html": "/TJgames/index.html",
+    "main.d9e89685.css.map": "/TJgames/static/css/main.d9e89685.css.map",
+    "main.ccefc032.js.map": "/TJgames/static/js/main.ccefc032.js.map",
+    "787.5dbb482b.chunk.js.map": "/TJgames/static/js/787.5dbb482b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d9e89685.css",
-    "static/js/main.a22d44e3.js"
+    "static/js/main.ccefc032.js"
   ]
 }
