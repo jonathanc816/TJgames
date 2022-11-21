@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/TJgames/static/css/main.d9e89685.css",
+    "main.js": "/TJgames/static/js/main.db906c34.js",
+    "static/js/787.5dbb482b.chunk.js": "/TJgames/static/js/787.5dbb482b.chunk.js",
+    "index.html": "/TJgames/index.html",
+    "main.d9e89685.css.map": "/TJgames/static/css/main.d9e89685.css.map",
+    "main.db906c34.js.map": "/TJgames/static/js/main.db906c34.js.map",
+    "787.5dbb482b.chunk.js.map": "/TJgames/static/js/787.5dbb482b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d9e89685.css",
+    "static/js/main.db906c34.js"
+  ]
+}
